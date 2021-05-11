@@ -34,7 +34,7 @@ it('should redirect to protected page when username and password is correct', as
   expect(await screen.findByText('Protected Page')).toBeInTheDocument()
 })
 
-it('should not redirect to protected page when username and password is correct', async () => {
+it('should not redirect to protected page when username and password is not correct', async () => {
   render(
     <AuthProvider>
       <MemoryRouter initialEntries={[{ pathname: '/login' }]} initialIndex={0}>

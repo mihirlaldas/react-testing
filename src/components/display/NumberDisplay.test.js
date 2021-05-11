@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import NumberDisplay from './NumberDisplay'
 import NumberIncrement from './NumberIncrement'
 
-test('calling render with the same component on the same container does not remount', () => {
+it('calling render with the same component on the same container does not remount', () => {
   const { rerender } = render(<NumberDisplay number={1} />)
   expect(screen.getByTestId('number-display')).toHaveTextContent('1')
 
